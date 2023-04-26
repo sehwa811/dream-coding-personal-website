@@ -230,25 +230,4 @@ button:hover{
       opacity: 0;
     }
   }
-  
-
-.positionstatic {
-  position: absolute;
-  top: 50px;
-}
-
-.moveup {
-    animation: moveup 2s;
-    -webkit-animation: moveup 2s;
-    -moz-animation: moveup 2s;
-}
-
-@-webkit-keyframes moveup { 
-    from {
-      transform: translate3d(0, 50%, 0)
-    }
-    to {
-      transform: translateZ(0);
-    }
-}
 
