@@ -1,0 +1,254 @@
+:root {
+    --text-color: #F1F6F9;
+    --background-color: #212A3E;
+    --accent-color: #9BA4B5;
+  }
+  /*색을 한번에 다 변경할 수 있게 됨*/
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Zilla Slab', serif;
+    background-color: #F1F6F9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    color: var(--text-color);
+  }
+  
+  .navbar_logo {
+    font-size: 24px;
+  }
+  
+  .navbar_logo i {
+    color: var(--accent-color);
+  }
+  
+  .navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* padding을 넣으면 영역 자체가 넓어진다. margin은 좁아짐 */
+  .navbar_menu li {
+    padding: 8px 16px;  
+  }
+  
+  .navbar_menu li:hover {
+    background-color: var(--accent-color);
+    transition: 0.3s;
+    border-radius: 4px;
+  }
+  
+  .navbar_icons {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar_icons li {
+    padding: 8px 12px;
+    padding-left: 0;
+  }  /*맨 앞 패딩이 기본으로 좀 있기 때문에 0으로 바꿔줌*/
+  
+  .navbar_toggleBtn {
+    display: none; 
+    position: absolute;
+    right: 32px;
+    font-size: 20px;
+    color: var(--accent-color);
+  }
+  /*이 햄버거 버튼은 flex 아니고 항상 우상단에 있었음 좋겠음.
+  원래 문서의 흐름에서 벗어나서 위치해야 함. 
+  position absolute 사용*/
+  
+  
+  @media screen and (max-width:800px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 8px 24px;
+    }
+  /*start로 모두를 고정한 후에 menu 부분만 다시 center에 배치*/
+    .navbar_menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }  /*너비가 너무 작으면 가운데로 정렬이 되지 않으므로 100%로 바꿔준다*/
+  
+    .navbar_menu li {
+      width: 100%;
+      text-align: center;
+    } /*너비가 100이 되면 텍스트는 자동으로 왼쪽 정렬됨. center로 다시 바꿔주기*/
+    
+    .navbar_icons {
+      display: none;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .navbar_toggleBtn {
+      display: block;
+    }
+  }
+  
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+
+
+/*메인화면 웰컴메시지*/
+div.forPadding {
+    width: 50%;
+    color: var(--background-color);
+    padding: 8px 24px;
+    text-align: center;
+    margin: 50px auto;
+    position: relative;
+
+}
+
+#guest_name {
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #9BA4B5;
+    border: none;
+    font-size: 18px;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    caret-color: transparent;
+}
+
+#guest_name:focus {
+    border: solid #212A3E;
+}
+
+
+#bd_select {
+    padding: 20px;
+    font-size: 25px;
+}
+
+.date {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #9BA4B5;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    caret-color: transparent;
+}
+
+.date::-webkit-outer-spin-button,
+.date::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.date:focus {
+    border: solid #212A3E;
+}
+
+
+label {
+    position: relative;
+    top: 3px;
+    padding: 5px;
+}
+
+button {
+    margin: 8px;
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #212A3E;
+    color: #9BA4B5;
+}
+
+button:hover{
+    color: #c7cfde;
+    transition: 0.3s;
+}
+
+.fadein {
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+.fadeout {
+    animation: fadeout 2s;
+    -webkit-animation: fadeout 2s;
+}
+
+@-webkit-keyframes fadeout { 
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+
+
+.blink {
+    -webkit-animation: blink 2s ease-in-out infinite alternate;
+    -moz-animation: blink 2s ease-in-out infinite alternate;
+    animation: blink 2s ease-in-out infinite alternate;
+} 
+
+@keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+
+.positionstatic {
+  position: absolute;
+  top: 50px;
+}
+
+.moveup {
+    animation: moveup 2s;
+    -webkit-animation: moveup 2s;
+    -moz-animation: moveup 2s;
+}
+
+@-webkit-keyframes moveup { 
+    from {
+      transform: translate3d(0, 50%, 0)
+    }
+    to {
+      transform: translateZ(0);
+    }
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sehwa World</title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5049d8372c.js" crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+  <nav class="navbar">
+    
+    <div class="navbar_logo">
+      <i class="fa-solid fa-cat"></i>
+      <a href="x">Sehwa World</a>
+    </div>
+    
+    <ul class="navbar_menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">I've watched</a></li>
+      <li><a href="">I've traveled</a></li>
+      <li><a href="">I've studied</a></li>
+      <li><a href="">I want to be</a></li>
+    </ul>
+    
+    <ul class="navbar_icons">
+      <li><i class="fa-brands fa-blogger"><a href="https://blog.naver.com/wsd0811" target="_blank"> Blog</a></i></li>
+      <li><i class="fa-solid fa-pencil"><a href="https://brunch.co.kr/@wsd08111" target="_blank"> Brunch</a></i></li>
+    </ul>
+
+    <a href="#" class="navbar_toggleBtn">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    
+  </nav>
+
+  <div class="forPadding" id="info">
+    <div id="name" class="fadein">
+        <h1>Welcome to Sehwa World, what's your name?</h1>
+        <input id="guest_name" type="text" onchange="PrintName()">
+        <p style="color: #9BA4B5" class="blink">Press enter</p>
+    </div>
+    
+    
+    <div id="bd_test" class="positionstatic">
+        <h1 id="result" class="positionstatic"></h1>
+        <h1 style="display: none">Now let me check something.</h1>
+        <form id="bd_select" style="display: none">  
+            <h2>When is Sehwa's birthday?</h2>
+            <label>month</label>
+            <input class="date" id="month" value="" type="number" min ="1" max="12">
+            <label>day</label>
+            <input class="date" id="day" value="" type="number">
+            <button>I'm sure!</button>
+        </form>
+        <h3 style="display:none">Disappointed  :&#40;</h3>
+    </div>
+  </div>
+
+  <div class="forPadding" id="last" style="display:none">
+    <h1>You're right! Now you can look around here!</h1>
+    <h1>Hope you enjoy  :&#41;</h1>
+  </div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
