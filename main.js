@@ -27,8 +27,7 @@ function congrats() {
   setTimeout(clearAll, 1900);
 }
 
-//input type number로 받았는데 왜 string일까
-//console.log(typeof(month.value))
+
 function handleOnsubmit(e) {
     e.preventDefault();
     if ((month.value ==="8") && (day.value === "11")) {
@@ -57,7 +56,6 @@ function PrintH1() {
 
 function nameClear() {
   nameDiv.remove();
-  document.getElementById("result").classList.add("moveup");
 } 
 
 function PrintName() {
